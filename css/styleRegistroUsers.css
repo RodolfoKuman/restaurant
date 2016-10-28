@@ -1,0 +1,140 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loader{
+	width: 30px;
+	height: 30px;
+}
+
+.card{
+	position: relative;
+	top:22em;
+	height: 80%;
+	margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 2em;
+  color: #46B29D;
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.fondoPortada{
+	position: absolute;
+	background-image: url("/imgs/sfeer_foto.jpg");
+  -webkit-filter: grayscale(70%);
+	filter: grayscale(70%);
+	height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+
+
+
+.form-registro{
+	position: relative;
+	z-index: 3;
+	color: white;
+	font-size: 1.2em;
+}
+
+
+
+.noti{
+	color: white;
+	font-size: 1.5em;
+	position: relative;
+	bottom: 0px;
+	top: 250px;
+	margin-left: 200px;
+}
+
+label{
+	font-size: 1.6em;
+	font-weight: 200;
+	text-align: right;
+}
+
+.container-fluid{
+	margin: 0px;
+	padding: 0px;
+}
+
+.form-group {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+  display: block;
+  margin: 0;
+  height: 40px;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  border-bottom: solid 1px #eee;
+}
+
+input:focus {
+  outline: none;
+}
+.style-4 input{
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+.style-4 input:focus,
+.style-4 input.focus {
+  border-bottom: solid 2px #42C37A;
+}
+
+
+/*
+  Styles for tablets
+*/
+
+@media (min-width:481px) and (max-width:800px){
+  .card{
+    height: 100%;
+  }
+
+  .fondoPortada{
+    height: 800px;
+  }
+
+} 
+
+/*
+  Styles for smartphones
+*/
+
+@media (min-width:320px) and (max-width:480px){
+  .card{
+    height: 100%;
+  }
+
+  .fondoPortada{
+    height: 800px;
+  }
+
+} 

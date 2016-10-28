@@ -1,0 +1,550 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.navigation li {
+  padding: 5px 10px;
+  transition: all .5s;
+}
+
+.navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation li a {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation li a:hover {
+  text-decoration: none;
+}
+
+.video-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.food {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.food:hover .screen {
+  top: 0%;
+}
+
+.food .screen {
+  position: relative;
+  z-index: 5;
+  top: -100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  transition: all .3s;
+}
+
+#menu-title {
+  color: black;
+  width: 300px;
+  z-index: 10;
+  left: calc(50% - 150px);
+  top: calc(50% - 2.5em);
+}
+
+#gallery {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#gallery .inner {
+  white-space: nowrap;
+  position: relative;
+  left: 0%;
+  transition: left 1.5s;
+}
+
+#gallery .image {
+  display: inline-block;
+  height: 100vh;
+  width: 100%;
+  margin-right: -4px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container .card {
+  padding: 2em;
+  margin-top: -200px;
+}
+
+#contact {
+  margin-top: -40px;
+}
+
+.path-step {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: #a2a2a2;
+  margin-top: 2em;
+  opacity: 0.4s;
+  display: block;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+
+.path-step:hover {
+  box-shadow: 0px 0px 5px rgba(250, 250, 250, 0.8);
+  opacity: 0.9s;
+}
+
+.path-step.active {
+  opacity: 1s;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(250, 250, 250, 0.8);
+}
+
+.step-form .step {
+  margin: 0px;
+  max-height: 150px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding: 1em 0.5em;
+}
+
+.step-form .step:not(.active) {
+  padding: 0px;
+  max-height: 0px;
+}
+
+.step-form .step input, .step-form .step textarea {
+  margin: 0px;
+  font-size: 2em;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #eee;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.step-form .step input:focus, .step-form .step textarea:focus {
+  border-bottom: solid 1px #69f0ae;
+}
+
+#location {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
+#map {
+  height: 500px;
+}
+
+#menu-opener {
+  display: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.black {
+  background-color: black;
+}
+
+.black-text {
+  color: black;
+}
+
+.card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.white {
+  background-color: white;
+}
+
+.title {
+  font-size: 4em;
+}
+
+.medium, .navigation li {
+  font-size: 1.5em;
+}
+
+.top-space {
+  margin-top: 2.5em;
+}
+
+.slim {
+  font-weight: 200;
+}
+
+.subtitle {
+  font-size: 2.5em;
+}
+
+.dancing-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.hidden {
+  display: none;
+}
+
+.large-padding {
+  padding: 10px 15px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.bottom {
+  bottom: 0px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.top {
+  top: 3em;
+}
+
+.right {
+  right: 5em;
+}
+
+.row {
+  margin: 0;
+}
+
+.up {
+  z-index: 100;
+}
+
+.white-text {
+  color: white;
+}
+
+#description ul {
+  margin: 0px;
+}
+
+#description.absolute {
+  bottom: 0px;
+}
+
+#description.fixed {
+  top: 0px !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (max-height: 600px) {
+  #contact, .container .card {
+    margin-top: -15%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #description {
+    text-align: left !important;
+    font-size: .8em;
+  }
+  #navigation {
+    display: none !important;
+  }
+  #menu-opener {
+    display: block;
+  }
+  .path-step {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  #responsive-nav ul {
+    position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    top: 80px;
+    background-color: #222;
+    left: 0px;
+    text-align: center;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+  }
+  #responsive-nav ul.active {
+    max-height: 80vh;
+  }
+  #responsive-nav ul li {
+    position: relative;
+    left: .3em;
+    text-align: left;
+    display: block;
+    margin-top: 1em;
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #responsive-nav ul {
+    top: 60px;
+  }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

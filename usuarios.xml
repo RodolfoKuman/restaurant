@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<usuarios>
+	<usuario>
+		<usuarioid>1</usuarioid>
+		<nombre>Rodolfo Kuman</nombre>
+		<correo>rodolfo.kuman@hotmail.com</correo>
+	</usuario>
+	<usuario>
+		<usuarioid>2</usuarioid>
+		<nombre>Angel Mendoza</nombre>
+		<correo>angel.mendoza@gmail.com</correo>
+	</usuario>
+	<usuario>
+		<usuarioid>3</usuarioid>
+		<nombre>Sebastian Arias</nombre>
+		<correo>sebastian.arias@hotmail.com</correo>
+	</usuario>
+	<usuario>
+		<usuarioid>4</usuarioid>
+		<nombre>Roberto Jimenez</nombre>
+		<correo>roberto.jimenez@gmail.com</correo>
+	</usuario>
+</usuarios>
